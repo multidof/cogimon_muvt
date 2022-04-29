@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<launch>
+
+    <include file="$(find cogimon_urdf)/launch/cogimon.launch"/>
+
+    <node pkg="muvt_ros" type="test_node" name="test_node" output="screen">
+        <param name="dcm_config" textfile="$(find cogimon_muvt)/params/dcm_config.yaml"/>
+        <param name="cartesio_stack" textfile="$(find cogimon_muvt)/params/cartesio_stack.yaml"/>
+    </node>
+
+    <node pkg="rviz" type="rviz" name="rviz" output="screen"
+      args="-d $(find wolf_muvt)/rviz/muvt.rviz"/>
+
+</launch>
