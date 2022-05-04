@@ -9,6 +9,6 @@
     </node>
 
     <node pkg="rviz" type="rviz" name="rviz" output="screen"
-      args="-d $(find wolf_muvt)/rviz/muvt.rviz"/>
+      args="-d $(find cogimon_muvt)/rviz/muvt.rviz"/>
 
 </launch>
